@@ -21,6 +21,9 @@ footer {
 
 footer a {
   color: #4aee88;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  border-bottom: 1px solid #4aed88;
 }
 
 .inputGroup {
@@ -58,14 +61,38 @@ footer a {
   transition: all 0.3s ease-in-out;
 }
 
-.joinbtn{
-  background-color: #4aee88 ;
-  align-self:flex-end;
+.joinbtn {
+  background-color: #4aee88;
+  align-self: flex-end;
   width: 100px;
   font-weight: 600;
 }
 
-.joinbtn:hover{
+.joinbtn:hover {
+  color: white;
   background-color: #2b824c;
+  transition: all 0.3s ease-in-out;
+}
+
+.creatInfo {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.createNewBtn {
+  color: #4aed88;
+  background: none;
+  border: none;
+  text-decoration: none;
+  border-bottom: 1px solid #4aed88;
+  transition: all 0.3s ease-in-out;
+}
+
+.createNewBtn:hover,
+footer a:hover {
+  color: #2b824c;
+  border-color: #2b824c;
   transition: all 0.3s ease-in-out;
 }
