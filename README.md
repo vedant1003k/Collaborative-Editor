@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Collaborative App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a collaborative application built using React, Express, Socket.IO, and other modern technologies.
 
-## Available Scripts
+## Prerequisites
 
-In the project directory, you can run:
+Before running the project locally, ensure you have the following installed:
 
-### `yarn start`
+- [Node.js](https://nodejs.org/) (version 14 or above)
+- [Yarn](https://yarnpkg.com/) (Package Manager)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Follow the steps below to set up and run the application on your local machine.
 
-### `yarn test`
+### 1. Clone the Repository
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone <repository-url>
+cd collaborative-app
+```
 
-### `yarn build`
+### 2. Install Dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Run the following command to install the required dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+yarn install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 3. Run the Application
 
-### `yarn eject`
+#### Development Mode
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To start the server and client in development mode with hot-reloading:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Start the server:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   yarn server:dev
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Start the React development server:
 
-## Learn More
+   ```bash
+   yarn start
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   The application will be available at [http://localhost:3000](http://localhost:3000).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Production Mode
 
-### Code Splitting
+To run the application in production mode:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Build the React application:
 
-### Analyzing the Bundle Size
+   ```bash
+   yarn build
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. Start the server:
 
-### Making a Progressive Web App
+   ```bash
+   yarn server:prod
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3. Access the application in your browser at [http://localhost:3000](http://localhost:3000).
 
-### Advanced Configuration
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- `server.js`: Entry point for the Express server.
+- `src/`: Contains React components, pages, and other frontend files.
+- `public/`: Public assets such as images and static files.
 
-### Deployment
+## Scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- `yarn start`: Runs the React development server.
+- `yarn build`: Builds the React application for production.
+- `yarn test`: Runs the test suite.
+- `yarn server:dev`: Starts the server with hot-reloading.
+- `yarn server:prod`: Starts the server in production mode.
 
-### `yarn build` fails to minify
+## Dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- React: Frontend library.
+- Express: Backend framework.
+- Socket.IO: Real-time communication.
+- Nodemon: Development tool for monitoring server changes.
+- Codemirror: Code editor component.
