@@ -17,7 +17,7 @@ Follow the steps below to set up and run the application on your local machine.
 
 ```bash
 git clone <repository-url>
-cd collaborative-app
+cd Collaborative-Editor
 ```
 
 ### 2. Install Dependencies
@@ -43,7 +43,7 @@ To start the server and client in development mode with hot-reloading:
 2. Start the React development server:
 
    ```bash
-   yarn start
+   yarn start:front
    ```
 
    The application will be available at [http://localhost:3000](http://localhost:3000).
@@ -55,7 +55,7 @@ To run the application in production mode:
 1. Build the React application:
 
    ```bash
-   yarn build
+   yarn start
    ```
 
 2. Start the server:
