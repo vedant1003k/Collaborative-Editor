@@ -25,7 +25,7 @@
     "server:dev": "nodemon server.js",
     "server:prod": "node server.js",
     "start:front": "react-scripts start",
-    "start": "yarn build && yarn server:prod",
+    "start": "yarn run build && yarn run server:prod",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
