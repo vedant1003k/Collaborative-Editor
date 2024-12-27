@@ -2,10 +2,22 @@ import express from "express";
 import { createServer } from "http";
 import { Server } from "socket.io";
 import ACTIONS from "./src/Action.js";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 
 const app = express();
 const server = createServer(app);
 const io = new Server(server);
+
+// building for deployment
+app.use(express.static("build"));
+app.use((req, res, next) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
 
 const userSocketMap = {};
 
@@ -50,6 +62,10 @@ io.on("connection", (socket) => {
     // remove client whic is writing or client which is writing should not emit this event
 
     socket.in(roomId).emit(ACTIONS.CODE_CHANGE, { code });
+  });
+
+  socket.on(ACTIONS.SYNC_CODE, ({ code, socketId }) => {
+    io.to(socketId).emit(ACTIONS.CODE_CHANGE, { code });
   });
 
   socket.on("disconnecting", () => {

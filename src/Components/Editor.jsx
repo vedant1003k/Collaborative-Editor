@@ -7,7 +7,7 @@ import "codemirror/addon/edit/closetag";
 import "codemirror/addon/edit/closebrackets";
 import ACTIONS from "../Action";
 
-const Editor = ({ socketRef, roomId }) => {
+const Editor = ({ socketRef, roomId, onCodeChange }) => {
   const editorRef = useRef(null);
   useEffect(() => {
     async function init() {
@@ -26,6 +26,7 @@ const Editor = ({ socketRef, roomId }) => {
         // console.log(changes);
         const { origin } = changes;
         const code = instance.getValue();
+        onCodeChange(code);
         if (origin !== "setValue") {
           // checking
           socketRef.current.emit(ACTIONS.CODE_CHANGE, {
@@ -53,9 +54,9 @@ const Editor = ({ socketRef, roomId }) => {
       });
     }
 
-    return ()=>{
+    return () => {
       socketRef.current.off(ACTIONS.CODE_CHANGE);
-    }
+    };
   }, [socketRef.current]);
 
   return <textarea id="realtimeEditor"></textarea>;
