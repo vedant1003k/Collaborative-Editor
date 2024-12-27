@@ -11,6 +11,7 @@
   padding: 20px;
   border-radius: 10px;
   width: 400px;
+  /* margin-top: 100px; */
   max-width: 90%;
 }
 
@@ -95,4 +96,80 @@ footer a:hover {
   color: #2b824c;
   border-color: #2b824c;
   transition: all 0.3s ease-in-out;
+}
+
+
+.mainWrap {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  /* height: 100vh; */
+}
+
+.aside {
+  background: #1c1e29;
+  padding: 16px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.asideInner {
+  flex: 1;
+}
+
+.clientList {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.client {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.userName {
+  margin-top: 10px;
+}
+
+.logo {
+
+  padding-bottom: 10px;
+}
+
+.logoImg {
+  border-bottom: 1px solid #424242;
+  height: 60px;
+  /* width: 200px; */
+}
+
+.copyBtn {
+  font-weight: 600;
+}
+.copyBtn:hover {
+  color: white;
+  background-color: #83868473;
+  transition: all 0.3s ease-in-out;
+}
+
+.leaveBtn {
+  margin-top: 20px;
+  background: #4aed88;
+  font-weight: 600;
+}
+
+.leaveBtn:hover {
+  color: white;
+  background-color: #2b824c;
+  transition: all 0.3s ease-in-out;
+}
+
+.CodeMirror {
+  min-height: calc(100vh - 20px);
+  font-size: 20px;
+  line-height: 1.6;
+  padding-top: 20px;
 }
